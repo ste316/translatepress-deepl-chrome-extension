@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Translation Extension",
+  "version": "1.0.0",
+  "description": "Translates text using DeepL API",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://localhost:8443/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://builditup.it/*?trp-edit-translation=true"],
+      "js": ["content.js"]
+    }
+  ]
+}
